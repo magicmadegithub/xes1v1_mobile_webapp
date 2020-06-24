@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TextStyles {
   TextStyles._();
 
@@ -13,7 +12,7 @@ class TextStyles {
 
   static TextStyle get logo2 => TextStyle(
         color: Color(0xFF45405B),
-        fontSize: 22.0,
+        fontSize: 20.0,
         fontWeight: FontWeight.bold,
         letterSpacing: 1.0,
       );
@@ -23,4 +22,31 @@ class TextStyles {
         letterSpacing: 1.0,
         color: Colors.black,
       );
+
+  static TextStyle get text1 => TextStyle(
+        fontSize: 16.0,
+        letterSpacing: 1.0,
+        color: Colors.black,
+        fontStyle: FontStyle.italic,
+      );
+
+  static TextStyle get text2 => TextStyle(
+      fontSize: 16.0,
+      letterSpacing: 1.0,
+      color: Colors.red,
+      fontStyle: FontStyle.italic,
+      fontWeight: FontWeight.bold);
+
+  static TextStyle get articleTitle => TextStyle(
+      fontSize: 24.0,
+      );
+
+  static TextStyle get articleContent => TextStyle(
+      fontSize: 15.0,
+  color:  Color(0xFF333333));
+
+  static TextStyle get articleTime => TextStyle(
+    fontSize: 15.0,
+    color: Colors.grey
+  );
 }

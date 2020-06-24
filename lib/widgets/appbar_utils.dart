@@ -67,7 +67,7 @@ class AppBarUtils {
           if (clickCallback != null) {
             _selectedIndex = 0;
             handleMenuTextColor();
-            clickCallback();
+            clickCallback(_selectedIndex);
           }
         },
       ),
@@ -79,7 +79,7 @@ class AppBarUtils {
         onPressed: () {
           _selectedIndex = 1;
           handleMenuTextColor();
-          clickCallback();
+          clickCallback(_selectedIndex);
         },
       ),
       MaterialButton(
@@ -90,7 +90,7 @@ class AppBarUtils {
         onPressed: () {
           _selectedIndex = 2;
           handleMenuTextColor();
-          clickCallback();
+          clickCallback(_selectedIndex);
         },
       ),
       MaterialButton(
@@ -101,7 +101,7 @@ class AppBarUtils {
         onPressed: () {
           _selectedIndex = 3;
           handleMenuTextColor();
-          clickCallback();
+          clickCallback(_selectedIndex);
         },
       ),
       MaterialButton(
@@ -112,7 +112,7 @@ class AppBarUtils {
         onPressed: () {
           _selectedIndex = 4;
           handleMenuTextColor();
-          clickCallback();
+          clickCallback(_selectedIndex);
         },
       ),
     ];
