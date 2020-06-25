@@ -10,11 +10,10 @@ class Strings {
   static const String menu_honor = '荣誉';
   static const String menu_about = '关于';
 
-  static const String textCh1 = '     面向未来教育，';
-  static const String textCh2 = '     终身共同成长。';
-  static const String textUs1 = '     Education for the future,';
-  static const String textUs2 = '     Grow together for life.';
-  static const String textAuth =
-      '                                           ----客户端团队';
+  static const String textCh1 = '面向未来教育，';
+  static const String textCh2 = '终身共同成长。';
+  static const String textUs1 = 'Education for the future,';
+  static const String textUs2 = 'Grow together for life.';
+  static const String textAuth = '----客户端团队';
   static const String read_all = '阅读全文';
 }

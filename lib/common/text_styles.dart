@@ -38,15 +38,28 @@ class TextStyles {
       fontWeight: FontWeight.bold);
 
   static TextStyle get articleTitle => TextStyle(
-      fontSize: 24.0,
+        fontSize: 24.0,
       );
 
-  static TextStyle get articleContent => TextStyle(
-      fontSize: 15.0,
-  color:  Color(0xFF333333));
+  static TextStyle get articleContent =>
+      TextStyle(fontSize: 15.0, color: Color(0xFF333333));
 
-  static TextStyle get articleTime => TextStyle(
+  static TextStyle get articleTime =>
+      TextStyle(fontSize: 15.0, color: Color(0xFF757575));
+
+  static TextStyle get articleTag => TextStyle(
+        fontSize: 15.0,
+        fontStyle: FontStyle.italic,
+        color: Color(0xFF757575),
+      );
+
+  static TextStyle get articleReadAll => TextStyle(
     fontSize: 15.0,
-    color: Colors.grey
+    color: Colors.red,
+  );
+
+  static TextStyle get linkText => TextStyle(
+    fontSize: 13.0,
+    color: Colors.red,
   );
 }

@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:xes1v1mobileweb/common/constant.dart';
-import 'package:xes1v1mobileweb/common/strings.dart';
-import 'package:xes1v1mobileweb/common/text_styles.dart';
 import 'package:xes1v1mobileweb/module/about/about.dart';
 import 'package:xes1v1mobileweb/module/article/article.dart';
 import 'package:xes1v1mobileweb/module/course/course.dart';
@@ -19,6 +16,14 @@ class HomeWeb extends StatefulWidget {
 class HomeWebState extends State<HomeWeb> {
   int _index = 0;
 
+  final List<Widget> tabs = [
+    Article(),
+    Frame(),
+    Course(),
+    Honor(),
+    About(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -30,26 +35,12 @@ class HomeWebState extends State<HomeWeb> {
               _index = index;
             });
           }),
-          body: getBodyWidget(),
+          body: IndexedStack(
+            index: _index,
+            children: tabs,
+          ),
         ),
       ),
     );
-  }
-
-  getBodyWidget() {
-    switch (_index) {
-      case Constants.pageArticle:
-        return Article();
-      case Constants.pageFrame:
-        return Frame();
-      case Constants.pageCourse:
-        return Course();
-      case Constants.pageHonor:
-        return Honor();
-      case Constants.pageAbout:
-        return About();
-      default:
-        return Article();
-    }
   }
 }
