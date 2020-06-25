@@ -95,7 +95,7 @@ class ArticleRightWidget extends StatelessWidget {
                   child: Wrap(
                     spacing: 5,
                     alignment: WrapAlignment.spaceAround,
-                    children: getLink(),
+                    children: getLinks(),
                   ),
                 )
               ],
@@ -147,12 +147,16 @@ class ArticleRightWidget extends StatelessWidget {
     return tags;
   }
 
-  List<Widget> getLink() {
+  List<Widget> getLinks() {
     List<Widget> tags = [];
     Map<String, dynamic> linkMap = {
-      "知音楼": "http://www.zhiyinlou.com",
-      "TTC技术交流平台": "https://ttc.zhiyinlou.com",
+      "学而思网校1对1": "https://www.xes1v1.com/",
+      "知音楼": "http://www.zhiyinlou.com/",
+      "TTC技术交流平台": "https://ttc.zhiyinlou.com/",
+      "团队Wiki":
+          "https://wiki.zhiyinlou.com/pages/viewpage.action?pageId=2267665",
       "Flutter中文网": "https://flutterchina.club/",
+      "老孟Flutter": "http://laomengit.com/",
     };
     linkMap.forEach((key, value) {
       Container tagContainer = new Container(

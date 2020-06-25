@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 
 import 'net_url.dart';
-import 'package:xes1v1mobileweb/generated/json/base/json_convert_content.dart';
 
 class NetUtils {
   static final NetUtils _singleton = NetUtils._internal();
@@ -35,7 +34,7 @@ class NetUtils {
   }
 
   /// 调用dio进行网络请求
-  Future<T> _request<T>(
+  Future<Map<String, dynamic>> _request(
     String method,
     String url, {
     Map<String, dynamic> params,
@@ -50,31 +49,33 @@ class NetUtils {
         break;
     }
 
-    T _data = JsonConvert.fromJsonAsT(response.data);
-    return _data;
+    Map<String, dynamic> _result = response.data;
+    return _result;
   }
 
-  Future<T> request<T>(
+  Future<Map<String, dynamic>> request(
     String method,
     String url, {
     Map<String, dynamic> params,
   }) async {
-    var response = await _request<T>(method, url, params: params);
+    var response = await _request(method, url, params: params);
     return response;
   }
 
-  Future get<T>(String url,
-      {Function(T t) onData, Map<String, dynamic> params}) {
-    return request<T>('GET', url, params: params).then((result) {
+  Future get(String url,
+      {Function(Map<String, dynamic> result) onData,
+      Map<String, dynamic> params}) {
+    return request('GET', url, params: params).then((result) {
       if (onData != null) {
         onData(result);
       }
     });
   }
 
-  Future post<T>(String url,
-      {Function(T t) onData, Map<String, dynamic> params}) {
-    return request<T>('POST', url, params: params).then((result) {
+  Future post(String url,
+      {Function(Map<String, dynamic> result) onData,
+      Map<String, dynamic> params}) {
+    return request('POST', url, params: params).then((result) {
       if (onData != null) {
         onData(result);
       }

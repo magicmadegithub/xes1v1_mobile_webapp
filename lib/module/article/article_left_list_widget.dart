@@ -17,11 +17,11 @@ class _ArticleLeftListState extends State<ArticleLeftList> {
   @override
   void initState() {
     super.initState();
-    NetUtils.instance.get<ArticleListEntity>(NetUrl.articleList,
-        onData: (data) {
-      if (data.code == 0) {
+    NetUtils.instance.get(NetUrl.articleList, onData: (data) {
+      ArticleListEntity result = ArticleListEntity.fromJson(data);
+      if (result.code == 0) {
         setState(() {
-          _list = data.data;
+          _list = result.data;
         });
       }
     });
@@ -101,29 +101,5 @@ class _ArticleLeftListState extends State<ArticleLeftList> {
             );
           }),
     );
-  }
-}
-
-class ArticleItem extends StatefulWidget {
-  ArticleListData _data;
-
-  ArticleItem(ArticleListData data) {
-    _data = data;
-  }
-
-  @override
-  State<StatefulWidget> createState() => _ArticleItemState(_data);
-}
-
-class _ArticleItemState extends State<ArticleItem> {
-  ArticleListData _data;
-
-  _ArticleItemState(ArticleListData data) {
-    _data = data;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
