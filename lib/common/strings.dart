@@ -16,4 +16,5 @@ class Strings {
   static const String textUs2 = 'Grow together for life.';
   static const String textAuth = '----客户端团队';
   static const String read_all = '阅读全文';
+  static const String team_frame = '团队框架';
 }

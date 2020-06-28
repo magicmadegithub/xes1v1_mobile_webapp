@@ -31,7 +31,10 @@ class _ArticleLeftListState extends State<ArticleLeftList> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10),
-      child: ListView.builder(
+      child: ListView.separated(
+          separatorBuilder: (BuildContext context, int index) {
+            return Divider();
+          },
           itemCount: _list.length,
           itemBuilder: (BuildContext context, int index) {
             ArticleListData data = _list[index];

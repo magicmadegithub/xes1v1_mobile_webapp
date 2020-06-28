@@ -62,4 +62,16 @@ class TextStyles {
     fontSize: 13.0,
     color: Colors.red,
   );
+
+  static TextStyle get teamFrame => TextStyle(
+    fontSize: 32.0,
+    color: Colors.red,
+  );
+
+  static TextStyle get course => TextStyle(
+    fontSize: 16.0,
+    letterSpacing: 1.0,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
 }

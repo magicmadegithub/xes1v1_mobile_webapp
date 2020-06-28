@@ -7,6 +7,7 @@ class ArticleRightWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(left: 10),
         child: Column(
       children: <Widget>[
         Container(

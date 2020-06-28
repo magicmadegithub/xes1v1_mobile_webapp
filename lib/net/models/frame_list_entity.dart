@@ -34,6 +34,7 @@ class FrameEntity {
   String content;
   int frameID;
   String createData;
+  String link;
 
   FrameEntity(
       {this.id,
@@ -41,7 +42,8 @@ class FrameEntity {
         this.title,
         this.content,
         this.frameID,
-        this.createData});
+        this.createData,
+        this.link});
 
   FrameEntity.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -50,6 +52,7 @@ class FrameEntity {
     content = json['content'];
     frameID = json['frameID'];
     createData = json['createData'];
+    link = json['link'];
   }
 
   Map<String, dynamic> toJson() {
@@ -60,6 +63,7 @@ class FrameEntity {
     data['content'] = this.content;
     data['frameID'] = this.frameID;
     data['createData'] = this.createData;
+    data['link'] = this.link;
     return data;
   }
 }
