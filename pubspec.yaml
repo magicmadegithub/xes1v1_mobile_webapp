@@ -45,4 +45,11 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - images/it_word1.jpg
+    - images/it_word2.jpg
+    - images/it_word3.jpg
+    - images/it_word4.jpg
+    - images/it_word5.jpg
+
 
