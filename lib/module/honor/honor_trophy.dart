@@ -45,12 +45,13 @@ class _HonorTrophyState extends State<HonorTrophyWidget>
       delegate: _CircleFlowDelegate(_rad),
       children: [
         ...widget.children,
-        InkWell(
-            onTap: () {
-              _controller.reset();
-              _controller.forward();
-            },
-            child: widget.menu)
+        GestureDetector(
+          child: widget.menu,
+          onTap: () {
+            _controller.reset();
+            _controller.forward();
+          },
+        ),
       ],
     );
   }
