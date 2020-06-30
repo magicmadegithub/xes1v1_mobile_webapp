@@ -83,7 +83,7 @@ class CourseState extends State<Course> {
                     crossAxisCount: 3,
                     mainAxisSpacing: 5,
                     crossAxisSpacing: 10,
-                    childAspectRatio: 1.3,
+                    childAspectRatio: 1.25,
                   ),
                   itemCount: _list.length,
                   itemBuilder: (context, index) {
