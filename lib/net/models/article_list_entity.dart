@@ -35,6 +35,7 @@ class ArticleListData {
   int articleID;
   String author;
   String createData;
+  String link;
 
   ArticleListData(
       {this.id,
@@ -43,7 +44,8 @@ class ArticleListData {
       this.tag,
       this.articleID,
       this.author,
-      this.createData});
+      this.createData,
+      this.link});
 
   ArticleListData.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -53,6 +55,7 @@ class ArticleListData {
     articleID = json['articleID'];
     author = json['author'];
     createData = json['createData'];
+    link = json['link'];
   }
 
   Map<String, dynamic> toJson() {
@@ -64,6 +67,7 @@ class ArticleListData {
     data['articleID'] = this.articleID;
     data['author'] = this.author;
     data['createData'] = this.createData;
+    data['link'] = this.link;
     return data;
   }
 }

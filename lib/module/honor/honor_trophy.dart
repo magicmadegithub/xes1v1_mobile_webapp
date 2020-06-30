@@ -21,7 +21,7 @@ class _HonorTrophyState extends State<HonorTrophyWidget>
   @override
   void initState() {
     _controller = AnimationController(
-        duration: Duration(milliseconds: 1000), vsync: this)
+        duration: Duration(milliseconds: 500), vsync: this)
       ..addListener(() => setState(
           () => _rad = (_closed ? (_controller.value) : 1 - _controller.value)))
       ..addStatusListener((status) {

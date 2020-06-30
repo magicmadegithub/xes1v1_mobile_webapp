@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:xes1v1mobileweb/common/strings.dart';
 import 'package:xes1v1mobileweb/common/text_styles.dart';
 import 'package:xes1v1mobileweb/common/xes_utils.dart';
@@ -93,7 +94,9 @@ class _ArticleLeftListState extends State<ArticleLeftList> {
                               Strings.read_all,
                               style: TextStyles.articleReadAll,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              launch(data.link);
+                            },
                           ),
                         ],
                       ),

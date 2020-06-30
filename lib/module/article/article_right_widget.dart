@@ -7,104 +7,104 @@ class ArticleRightWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 10),
+        margin: EdgeInsets.only(left: 10),
         child: Column(
-      children: <Widget>[
-        Container(
-          margin: EdgeInsets.only(top: 12),
-          child: Card(
-            elevation: 5,
-            child: Container(
-              alignment: Alignment.topLeft,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(left: 50, top: 20),
-                    child: Text(Strings.textCh1, style: TextStyles.text1),
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(top: 12),
+              child: Card(
+                elevation: 5,
+                child: Container(
+                  alignment: Alignment.topLeft,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.only(left: 50, top: 20),
+                        child: Text(Strings.textCh1, style: TextStyles.text1),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 50),
+                        child: Text(Strings.textCh2, style: TextStyles.text1),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 50),
+                        child: Text(Strings.textUs1, style: TextStyles.text1),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 50),
+                        child: Text(Strings.textUs2, style: TextStyles.text1),
+                      ),
+                      Text(""),
+                      Container(
+                        margin: EdgeInsets.only(left: 120, bottom: 20),
+                        child: Text(Strings.textAuth, style: TextStyles.text2),
+                      ),
+                    ],
                   ),
-                  Container(
-                    margin: EdgeInsets.only(left: 50),
-                    child: Text(Strings.textCh2, style: TextStyles.text1),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 50),
-                    child: Text(Strings.textUs1, style: TextStyles.text1),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 50),
-                    child: Text(Strings.textUs2, style: TextStyles.text1),
-                  ),
-                  Text(""),
-                  Container(
-                    margin: EdgeInsets.only(left: 120, bottom: 20),
-                    child: Text(Strings.textAuth, style: TextStyles.text2),
-                  ),
-                ],
+                ),
               ),
             ),
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.only(top: 20),
-          alignment: Alignment.topLeft,
-          child: Card(
-            elevation: 5,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Tags',
-                    style: TextStyles.articleContent.copyWith(fontSize: 18),
-                  ),
-                  margin: EdgeInsets.only(top: 12),
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              alignment: Alignment.topLeft,
+              child: Card(
+                elevation: 5,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Tags',
+                        style: TextStyles.articleContent.copyWith(fontSize: 18),
+                      ),
+                      margin: EdgeInsets.only(top: 12),
+                    ),
+                    Container(
+                      alignment: Alignment.topLeft,
+                      margin: EdgeInsets.all(12),
+                      child: Wrap(
+                        spacing: 8,
+                        alignment: WrapAlignment.spaceAround,
+                        children: getTags(),
+                      ),
+                    )
+                  ],
                 ),
-                Container(
-                  alignment: Alignment.topLeft,
-                  margin: EdgeInsets.all(12),
-                  child: Wrap(
-                    spacing: 8,
-                    alignment: WrapAlignment.spaceAround,
-                    children: getTags(),
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.only(top: 20),
-          alignment: Alignment.topLeft,
-          child: Card(
-            elevation: 5,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  alignment: Alignment.center,
-                  child: Text(
-                    '友情链接',
-                    style: TextStyles.articleContent.copyWith(fontSize: 18),
-                  ),
-                  margin: EdgeInsets.only(top: 12),
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              alignment: Alignment.topLeft,
+              child: Card(
+                elevation: 5,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      alignment: Alignment.center,
+                      child: Text(
+                        '友情链接',
+                        style: TextStyles.articleContent.copyWith(fontSize: 18),
+                      ),
+                      margin: EdgeInsets.only(top: 12),
+                    ),
+                    Container(
+                      alignment: Alignment.topLeft,
+                      margin: EdgeInsets.all(10),
+                      child: Wrap(
+                        spacing: 5,
+                        alignment: WrapAlignment.spaceAround,
+                        children: getLinks(),
+                      ),
+                    ),
+                  ],
                 ),
-                Container(
-                  alignment: Alignment.topLeft,
-                  margin: EdgeInsets.all(18),
-                  child: Wrap(
-                    spacing: 5,
-                    alignment: WrapAlignment.spaceAround,
-                    children: getLinks(),
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-        ),
-      ],
-    ));
+          ],
+        ));
   }
 
   List<Widget> getTags() {
@@ -125,25 +125,14 @@ class ArticleRightWidget extends StatelessWidget {
       "混合开发"
     ];
     for (String tag in tagsStr) {
-      Container tagContainer = new Container(
-        margin: EdgeInsets.all(3),
-        child: Container(
-          child: Text(
-            tag,
-            style: TextStyles.articleContent,
-          ),
-          margin: EdgeInsets.all(2),
+      tags.add(RawChip(
+        label: Text(
+          tag,
+          style: TextStyles.articleContent.copyWith(color: Colors.red),
         ),
-        padding: EdgeInsets.symmetric(horizontal: 5),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: Colors.red,
-            width: 1,
-          ),
-        ),
-      );
-      tags.add(tagContainer);
+        backgroundColor: Colors.white,
+        elevation: 10,
+      ));
     }
     return tags;
   }
@@ -157,19 +146,26 @@ class ArticleRightWidget extends StatelessWidget {
       "团队Wiki":
           "https://wiki.zhiyinlou.com/pages/viewpage.action?pageId=2267665",
       "Flutter中文网": "https://flutterchina.club/",
-      "老孟Flutter": "http://laomengit.com/",
     };
     linkMap.forEach((key, value) {
       Container tagContainer = new Container(
-        child: Container(
-            child: OutlineButton(
-                child: Text(key, style: TextStyles.linkText),
-                borderSide: new BorderSide(color: Colors.red, width: 2),
-                color: Colors.blue,
-                onPressed: () {
-                  launch(value);
-                })),
-      );
+          child: Container(
+        child: ActionChip(
+            avatar: CircleAvatar(
+              backgroundColor: Colors.red,
+              child: Text(
+                key.substring(0, 1),
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            label: Text(key),
+            elevation: 10,
+            backgroundColor: Colors.white,
+            shadowColor: Colors.red,
+            onPressed: () {
+              launch(value);
+            }),
+      ));
       tags.add(tagContainer);
     });
     return tags;
