@@ -131,7 +131,7 @@ class ArticleRightWidget extends StatelessWidget {
           style: TextStyles.articleContent.copyWith(color: Colors.red),
         ),
         backgroundColor: Colors.white,
-        elevation: 10,
+        elevation: 5,
       ));
     }
     return tags;
@@ -159,7 +159,7 @@ class ArticleRightWidget extends StatelessWidget {
               ),
             ),
             label: Text(key),
-            elevation: 10,
+            elevation: 5,
             backgroundColor: Colors.white,
             shadowColor: Colors.red,
             onPressed: () {
