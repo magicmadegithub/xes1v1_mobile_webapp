@@ -1,6 +1,6 @@
 class NetUrl {
 
-  static  String host = "http://122.51.125.14:8888";
+  static  String host = "http://mobile.tdahai.com/api/";
 
   static  String articleList = "/articleList";
   static  String article = "/article";
