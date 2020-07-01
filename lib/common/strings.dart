@@ -1,8 +1,8 @@
 class Strings {
   Strings._();
 
-  static const String xueersi = '学而思网校';
-  static const String onevone = '1对1';
+  static const String xueersi = '学而思网校1对1';
+  static const String onevone = '客户端团队';
 
   static const String menu_article = '文章';
   static const String menu_frame = '框架';
