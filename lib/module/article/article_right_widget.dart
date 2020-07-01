@@ -113,7 +113,7 @@ class ArticleRightWidget extends StatelessWidget {
       "Android",
       "iOS",
       "iPad",
-      "mac",
+      "MAC",
       "Java",
       "Kotlin",
       "object-c",
