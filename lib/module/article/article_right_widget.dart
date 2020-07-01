@@ -152,7 +152,7 @@ class ArticleRightWidget extends StatelessWidget {
           child: Container(
         child: ActionChip(
             avatar: CircleAvatar(
-              backgroundColor: Colors.red,
+              backgroundColor: Color(0xFFE57373),
               child: Text(
                 key.substring(0, 1),
                 style: TextStyle(color: Colors.white),
