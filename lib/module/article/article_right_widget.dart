@@ -8,102 +8,104 @@ class ArticleRightWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         margin: EdgeInsets.only(left: 10),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(top: 12),
-              child: Card(
-                elevation: 5,
-                child: Container(
-                  alignment: Alignment.topLeft,
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 12),
+                child: Card(
+                  elevation: 5,
+                  child: Container(
+                    alignment: Alignment.topLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(left: 50, top: 20),
+                          child: Text(Strings.textCh1, style: TextStyles.text1),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 50),
+                          child: Text(Strings.textCh2, style: TextStyles.text1),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 50),
+                          child: Text(Strings.textUs1, style: TextStyles.text1),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 50),
+                          child: Text(Strings.textUs2, style: TextStyles.text1),
+                        ),
+                        Text(""),
+                        Container(
+                          margin: EdgeInsets.only(left: 120, bottom: 20),
+                          child: Text(Strings.textAuth, style: TextStyles.text2),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                alignment: Alignment.topLeft,
+                child: Card(
+                  elevation: 5,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Container(
-                        margin: EdgeInsets.only(left: 50, top: 20),
-                        child: Text(Strings.textCh1, style: TextStyles.text1),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Tags',
+                          style: TextStyles.articleContent.copyWith(fontSize: 18),
+                        ),
+                        margin: EdgeInsets.only(top: 12),
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 50),
-                        child: Text(Strings.textCh2, style: TextStyles.text1),
+                        alignment: Alignment.topLeft,
+                        margin: EdgeInsets.all(12),
+                        child: Wrap(
+                          spacing: 8,
+                          alignment: WrapAlignment.spaceAround,
+                          children: getTags(),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                alignment: Alignment.topLeft,
+                child: Card(
+                  elevation: 5,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        alignment: Alignment.center,
+                        child: Text(
+                          '友情链接',
+                          style: TextStyles.articleContent.copyWith(fontSize: 18),
+                        ),
+                        margin: EdgeInsets.only(top: 12),
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 50),
-                        child: Text(Strings.textUs1, style: TextStyles.text1),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 50),
-                        child: Text(Strings.textUs2, style: TextStyles.text1),
-                      ),
-                      Text(""),
-                      Container(
-                        margin: EdgeInsets.only(left: 120, bottom: 20),
-                        child: Text(Strings.textAuth, style: TextStyles.text2),
+                        alignment: Alignment.topLeft,
+                        margin: EdgeInsets.all(10),
+                        child: Wrap(
+                          spacing: 5,
+                          alignment: WrapAlignment.spaceAround,
+                          children: getLinks(),
+                        ),
                       ),
                     ],
                   ),
                 ),
               ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              alignment: Alignment.topLeft,
-              child: Card(
-                elevation: 5,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Tags',
-                        style: TextStyles.articleContent.copyWith(fontSize: 18),
-                      ),
-                      margin: EdgeInsets.only(top: 12),
-                    ),
-                    Container(
-                      alignment: Alignment.topLeft,
-                      margin: EdgeInsets.all(12),
-                      child: Wrap(
-                        spacing: 8,
-                        alignment: WrapAlignment.spaceAround,
-                        children: getTags(),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              alignment: Alignment.topLeft,
-              child: Card(
-                elevation: 5,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        '友情链接',
-                        style: TextStyles.articleContent.copyWith(fontSize: 18),
-                      ),
-                      margin: EdgeInsets.only(top: 12),
-                    ),
-                    Container(
-                      alignment: Alignment.topLeft,
-                      margin: EdgeInsets.all(10),
-                      child: Wrap(
-                        spacing: 5,
-                        alignment: WrapAlignment.spaceAround,
-                        children: getLinks(),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ));
   }
 
